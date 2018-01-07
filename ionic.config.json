@@ -1,0 +1,8 @@
+{
+  "name": "kaohsiungmemory",
+  "app_id": "2602f792",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
