@@ -1,19 +1,24 @@
-<ion-menu [content]="content">
+<ion-menu [content]="mainContent">
   <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
+    <ion-toolbar color="primary">
+      <ion-title>
+        記憶高雄
+      </ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
+  <ion-content id="side-menu21" style="background-color:deault;">
+    <ion-list id="side-menu21-list1">
+      <ion-item color="none" menuClose="" on-click="goToIntro()" id="side-menu21-list-item1">
+        計畫介紹
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToMap()" id="side-menu21-list-item2">
+        觀看地圖
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToLinks()" id="side-menu21-list-item3">
+        更多連結
+      </ion-item>
     </ion-list>
   </ion-content>
-
 </ion-menu>
 
-<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
-<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<ion-nav #mainContent [root]="rootPage"></ion-nav>
