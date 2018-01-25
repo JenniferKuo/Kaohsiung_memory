@@ -1,3 +1,106 @@
 page-intro {
+	ion-slides {
+		height: 55vh;
+	}
 
+	.slide-image {
+	    height: 35vh;
+	    width: 100%;
+  	}
+
+  	.slide-title {
+    	margin-top: 1rem;
+    	font-size: 20px;
+    	color: #B97927;
+  	}
+  	b {
+    	font-weight: 500;
+  	}
+
+	p {
+		font-size: 14px;
+		line-height: 1.5;
+		color: #60646B;
+
+		b {
+		  color: #000000;
+		}
+	}
+}
+
+.swiper-pagination-bullet-active{
+    background: color($colors, secondary) !important;
+    opacity: 1;
+    border-radius: 0px;
+}
+.swiper-pagination-bullet{
+	background: black;
+	opacity: 1;
+    border-radius: 0px;
+    height: 15px;
+    width: 15px;
+}
+.swiper-pagination {
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+    pointer-events: none;
+}
+.wrapper {
+	height: 15vh;
+	overflow: hidden;
+	padding: 10px;
+}
+.spacer {
+	height: 8vh;
+}
+section {
+    background-color: #EEEAE2;
+    width: 100%;
+    position: relative;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+.main {
+    position: relative;
+    max-width: 1280px;
+    margin: auto;
+    height: 100%;
+    padding-top: .1px;
+}
+section.introduce .wrap {
+    background-color: #FFF;
+    margin: 8%;
+    margin-bottom: 0;
+    min-height: 100px;
+    margin-top: 60px;
+}
+section.introduce .wrap .title {
+    background-color: #5A3325;
+    // height: 30px;
+    display: inline-block;
+    color: #FFF;
+    position: absolute;
+    margin-top: -18px;
+    padding: 12px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-align: center;
+    width: 74%;
+    margin-left: 5%;
+}
+section.introduce .wrap .content {
+    padding: 20px;
+    padding-top: 50px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer {
+	background: #EEEAE2;
+	height: 8%;
 }

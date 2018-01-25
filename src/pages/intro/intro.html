@@ -9,5 +9,32 @@
   </ion-navbar>
 </ion-header>
 <ion-content id="page1">
-	<iframe src="https://app.kaohsiungmemory.com/" style="height: 100vh; width: 100%;" frameborder="0"></iframe>
+	<ion-slides pager>
+	  <ion-slide *ngFor="let item of data">
+		<img src="https://kaohsiungmemory.com/{{item.photo}}" alt="" class="slide-image"/>
+		<div class="wrapper">
+			<h2 class="slide-title">{{item.name}}</h2>
+		    <p>{{item.content}}</p>
+		</div>
+		<div class="spacer"></div>
+	  </ion-slide>
+	</ion-slides>
+	<section class="introduce">
+	<div class="main">
+		<div class="wrap">
+			<div class="title">關於計畫</div>
+				<div class="content">{{project}}</div>
+			</div>
+	</div>
+
+
+	<div class="main">
+		<div class="wrap">
+			<div class="title">話說舊港區</div>
+				<div class="content">{{story}}</div>
+		</div>
+	</div>
+</section>
+<div class="footer"></div>
+
 </ion-content>
