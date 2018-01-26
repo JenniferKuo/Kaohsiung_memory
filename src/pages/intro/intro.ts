@@ -43,6 +43,8 @@ export class IntroPage {
   			this.project = data.index.project;
   			this.story = data.index.story;
   			console.log(data);
+        document.getElementById("project").innerHTML = this.project;
+        document.getElementById("story").innerHTML = this.story;
   		},err => {
   			console.log(err);
   		});
