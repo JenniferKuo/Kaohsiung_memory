@@ -8,7 +8,8 @@ import 'rxjs/add/operator/map';
   templateUrl: 'links.html'
 })
 export class LinksPage {
-
+  data: string;
+  
   constructor(public http: Http, public navCtrl: NavController) {
   }
   
