@@ -9,14 +9,19 @@
   </ion-navbar>
 </ion-header>
 <ion-content id="page1">
-	<ion-slides pager>
+	<ion-slides pager (click)="changeHeight()">
 	  <ion-slide *ngFor="let item of data">
 		<img src="https://kaohsiungmemory.com/{{item.photo}}" alt="" class="slide-image"/>
 		<div class="wrapper">
 			<h2 class="slide-title">{{item.name}}</h2>
-		    <p>{{item.content}}</p>
+			<div class="inner" [style.height]="wrapperHeight">
+		    	<p>{{item.content}}"</p>
+		    </div>
+		    <div class="spacer">
+				<ion-icon name='ios-arrow-dropdown-circle-outline' *ngIf="wrapperHeight!='auto'"></ion-icon>
+				<ion-icon name='ios-arrow-dropup-circle-outline' *ngIf="wrapperHeight=='auto'"></ion-icon>
+			</div>
 		</div>
-		<div class="spacer"></div>
 	  </ion-slide>
 	</ion-slides>
 	<section class="introduce">
